@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Rutas AQP</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styleUser.css" type="text/css">
+</head>
+<body>
+
+<div class="sidenav">
+  <a class="active" href="index.html">Rutas AQP</a>
+  <img src="images/person.png">
+  <a href="#">Mis Rutas</a>
+  <a href="#">Favoritos</a>
+  <a href="#">Caregorias</a>
+  <a href="#">Top 5</a>
+  <a href="#">Reseñas</a>
+  <a href="#">Puntuaciones</a>
+</div>
+
+<div class="content">
+
+		<button onclick="getLocation()">Mostrar Ubicación</button>
+
+		<div id="mapholder"></div>
+
+		<div class="data">
+		<label for="fname">Usuario</label>
+	    <input type="text" id="fname" name="firstname" placeholder="Vinces_6578" readonly>
+	    
+	    <label for="lname">Correo Electrónico</label>
+	    <input type="text" id="lname" name="lastname" placeholder="vinces_6578@mailtrix.net" readonly>
+
+	    <label for="lname">Nombres</label>
+	    <input type="text" id="lname" name="lastname" placeholder="Pablo Rodrigo" readonly>
+
+	    <label for="fname">Apellidos</label>
+	    <input type="text" id="fname" name="firstname" placeholder="Gonzales Mamani" readonly>
+
+	    <label for="lname">Fecha de Nacimiento</label>
+	    <input type="text" id="lname" name="lastname" placeholder="11/05/1992" readonly>
+
+	    <label for="fname">Pais</label>
+	    <input type="text" id="fname" name="firstname" placeholder="Perú" readonly>
+	    </div>
+
+		<script>
+		var x = document.getElementById("demo");
+
+		function getLocation() {
+		    if (navigator.geolocation) {
+		        navigator.geolocation.getCurrentPosition(showPosition, showError);
+		    } else {
+		        x.innerHTML = "Geolocation is not supported by this browser.";
+		    }
+		}
+
+		function showPosition(position) {
+		    var latlon = position.coords.latitude + "," + position.coords.longitude;
+		    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+		    +latlon+"&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
+		    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+		}
+
+		function showError(error) {
+		    switch(error.code) {
+		        case error.PERMISSION_DENIED:
+		            x.innerHTML = "User denied the request for Geolocation."
+		            break;
+		        case error.POSITION_UNAVAILABLE:
+		            x.innerHTML = "Location information is unavailable."
+		            break;
+		        case error.TIMEOUT:
+		            x.innerHTML = "The request to get user location timed out."
+		            break;
+		        case error.UNKNOWN_ERROR:
+		            x.innerHTML = "An unknown error occurred."
+		            break;
+		    }
+		}
+		</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rutas AQP</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="stylesheet" href="css/styleMain.css" type="text/css">
+	 <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+             
+                padding-top:0px;
+                background: url(images/wall.jpg) ;
+                background-repeat: no-repeat;
+                background-size:  auto;
+
+            }
+        </style>
+</head>
+<body>
+	<div id="header">
+		<div id="navbar">
+			<ul class="topnav">
+				<li><a class="active" href="index.html">Rutas AQP</a></li>
+				<li class="right"><a class="images" href="user.html"><img id="user" src="images/person.png"></a></li>
+				<li class="right"><a id="open-hide" class="open-hide">Menu</a>
+						<ul id="menu" class="menu">
+						  <li><a href="">Nueva Ruta  </a></li>
+						  <li><a href="">Favoritos   </a></li>
+						  <li><a href="">Categorias   </a></li>
+						  <li><a href="">Recientes   </a></li>    
+						</ul>
+				</li>
+			</ul>
+		</div>	
+	</div>
+
+	<div id="content" >
+
+		<fieldset>
+		  <legend><button id="open" class="open">Lo mejor del Día</button></legend>
+
+		 <div class="responsive">
+		  <div class="gallery">
+		    <a target="_blank" href="img_5terre.jpg">
+		      <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+		    </a>
+		    <div class="desc">Add a description of the image here</div>
+		  </div>
+		</div>
+
+
+		<div class="responsive">
+		  <div class="gallery">
+		    <a target="_blank" href="https://www.w3schools.com/css/img_5terre.jpg">
+		      <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Forest" width="600" height="400">
+		    </a>
+		    <div class="desc">Add a description of the image here</div>
+		  </div>
+		</div>
+ 		</fieldset>
+
+ 		<fieldset>
+		  <legend><button id="open" class="open">Top 5</button></legend>
+		</fieldset>
+
+		<fieldset>
+		  <legend><button id="open" class="open">Recomendación</button></legend>
+		</fieldset>
+
+		<fieldset>
+		  <legend><button id="open" class="open">Lo mejor del Día</button></legend>
+		</fieldset>
+
+	</div>
+
+	
+	
+	
+	<script type="text/javascript">
+		function changeClass(){
+		 document.getElementById("open-hide").classList.toggle('show');
+		}
+		window.onload = function() {
+	  	document.getElementById("open-hide").addEventListener( 'click' , changeClass ); 
+		}
+	</script>
+</body>
+</html>

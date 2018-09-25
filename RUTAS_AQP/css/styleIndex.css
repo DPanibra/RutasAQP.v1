@@ -1,0 +1,105 @@
+body {
+    margin:0px;
+}
+.index-text {
+  text-align: center;
+  font-family: "baloo";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: -500px;
+  transform: translate(-50%, -50%);
+  color: #0f3a66;
+}
+.rutas{
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:25px;
+  text-decoration: none;
+  font-weight: bold;
+   
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    opacity: 0.95;
+}
+
+ul.topnav li {
+    float: left;
+}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul.topnav li a:hover:not(.active){
+    background-color: #111;
+    
+}
+
+ul.topnav li a.active {
+    background-color: #008477;
+}
+
+ul.topnav li.right {
+    float: right;
+}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+h1{
+    font-family: 'Baloo';
+}
+
+.button {
+  display: inline-block;
+  border-radius: 12px;
+  background-color: #9e52b7;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span  {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+

@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+}
+
+.sidenav a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidenav a.active{
+    text-align: center;
+     background-color: #008477;
+
+}
+
+.sidenav a:hover:not(.active) {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.content {
+    margin-left: 200px;
+    padding-left: 20px;
+}
+.data{
+    margin-top: 20px;
+    margin-right: 10%;
+}
+
+button{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: #3292ad;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+img{
+    padding: 20px 20px;
+    margin-left: 45px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    width: 100%;
+    background-color: #e5e5e5;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
